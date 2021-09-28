@@ -1,0 +1,19 @@
+{
+  "name": "node-pw4",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Leonardo Freitas",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
