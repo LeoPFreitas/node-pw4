@@ -1,5 +1,6 @@
 ### Intellij ###
 .idea
+*.http
 
 ### Node template ###
 # Logs
