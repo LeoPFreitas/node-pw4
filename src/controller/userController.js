@@ -1,7 +1,11 @@
-const { createUser, getUserById, getAllUsers, updateUser, deleteUser } = require('../service/userService');
+const {createUser, getUserById, getAllUsers, updateUser, deleteUser, login} = require('../service/userService');
 
 exports.create = (req, res) => {
     createUser(req, res).then(r => r);
+};
+
+exports.login = (req, res) => {
+    login(req, res).then(r => r);
 };
 
 exports.findAll = (req, res) => {
