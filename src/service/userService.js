@@ -25,6 +25,24 @@ exports.createUser = async (req, res) => {
         })
 }
 
+exports.login = async (req, res) => {
+    db.sequelize.query('SELECT * FROM users WHERE name = :name AND password = :password', {
+        replacements: {
+            name: req.body.name,
+            password: req.body.password
+        },
+        type: db.sequelize.QueryTypes.SELECT
+    })
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(400).send({
+                message: 'User not found!'
+            });
+        });
+};
+
 exports.updateUser = async (req, res) => {
     const id = req.params.id;
 
